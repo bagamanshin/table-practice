@@ -48,16 +48,6 @@ const TableHeader = ({ table }: { table: ReturnType<typeof useReactTable<Row>> }
               <div className={clsx('flex items-center gap-2', header.subHeaders.length > 1 ? 'justify-center' : 'justify-start')}>
                 {flexRender(header.column.columnDef.header, header.getContext())}
                 {sortIcon}
-                {// header.column.getIsSorted() === 'asc' ? (
-                  // <SortAscIcon />
-                  // ) : header.column.getIsSorted() === 'desc' ? (
-                  // <SortDescIcon />
-                  // ) : header.column.getCanSort() ? (
-                  // <SortDefault />
-                  // ) : (
-                  // null
-                  // )
-                }
               </div>
             </th>
           );
