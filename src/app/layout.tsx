@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { Onest } from 'next/font/google';
 import * as React from 'react';
 
 import '@/styles/globals.css';
@@ -49,13 +50,20 @@ export const metadata: Metadata = {
   // ],
 };
 
+const font = Onest({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-onest',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html className={`${font.variable}`}>
       <body>{children}</body>
     </html>
   );
